@@ -1,14 +1,14 @@
 import { DioAccount } from "./DioAccount"
 
-export class CompanyAccount extends DioAccount {
+export class InvestAccount extends DioAccount {
 
   constructor(name: string, accountNumber: number){
     super(name, accountNumber)
   }
 
-  getLoan = (value : number): void => {
+  invest = (value : number): void => {
     if(this.status){
-      this.balance += value
+      this.balance += value + 10
 
       console.log(`seu saldo atual é ${this.balance}`)
       return
